@@ -10,13 +10,40 @@ Maximize
    + 20 demcon_cons_1_node_1_2 + 60 demcon_cons_3_node_3_3
    + 50 demcon_cons_2_node_2_3 + 40 demcon_cons_1_node_1_3
    + 120 demcon_cons_3_node_3_4 + 100 demcon_cons_2_node_2_4
-   + 80 demcon_cons_1_node_1_4 + [ - 1.5 demcon_cons_3_node_3_1 ^2
-   - 2 demcon_cons_2_node_2_1 ^2 - demcon_cons_1_node_1_1 ^2
-   - 1.5 demcon_cons_3_node_3_2 ^2 - 2 demcon_cons_2_node_2_2 ^2
-   - demcon_cons_1_node_1_2 ^2 - 1.5 demcon_cons_3_node_3_3 ^2
-   - 2 demcon_cons_2_node_2_3 ^2 - demcon_cons_1_node_1_3 ^2
-   - 1.5 demcon_cons_3_node_3_4 ^2 - 2 demcon_cons_2_node_2_4 ^2
-   - demcon_cons_1_node_1_4 ^2 ] / 2 
+   + 80 demcon_cons_1_node_1_4
+   - uncertain_intercept_node_time_1_consumer_node_1_cons_1
+   - uncertain_intercept_node_time_1_consumer_node_2_cons_2
+   - uncertain_intercept_node_time_1_consumer_node_3_cons_3
+   - uncertain_intercept_node_time_3_consumer_node_1_cons_1
+   - uncertain_intercept_node_time_3_consumer_node_2_cons_2
+   - uncertain_intercept_node_time_3_consumer_node_3_cons_3
+   - uncertain_intercept_node_time_2_consumer_node_1_cons_1
+   - uncertain_intercept_node_time_2_consumer_node_2_cons_2
+   - uncertain_intercept_node_time_2_consumer_node_3_cons_3
+   - uncertain_intercept_node_time_4_consumer_node_1_cons_1
+   - uncertain_intercept_node_time_4_consumer_node_2_cons_2
+   - uncertain_intercept_node_time_4_consumer_node_3_cons_3
+   - uncertain_slope_node_time_1_consumer_node_1_cons_1
+   - uncertain_slope_node_time_1_consumer_node_2_cons_2
+   - uncertain_slope_node_time_1_consumer_node_3_cons_3
+   - uncertain_slope_node_time_3_consumer_node_1_cons_1
+   - uncertain_slope_node_time_3_consumer_node_2_cons_2
+   - uncertain_slope_node_time_3_consumer_node_3_cons_3
+   - uncertain_slope_node_time_2_consumer_node_1_cons_1
+   - uncertain_slope_node_time_2_consumer_node_2_cons_2
+   - uncertain_slope_node_time_2_consumer_node_3_cons_3
+   - uncertain_slope_node_time_4_consumer_node_1_cons_1
+   - uncertain_slope_node_time_4_consumer_node_2_cons_2
+   - uncertain_slope_node_time_4_consumer_node_3_cons_3
+   - 2 consumer_slope_cons_3_node_3 - 2 consumer_intercept_cons_3_node_3
+   - 2 consumer_slope_cons_2_node_2 - 2 consumer_intercept_cons_2_node_2
+   - 2 consumer_slope_cons_1_node_1 - 2 consumer_intercept_cons_1_node_1
+   + [ - 1.5 demcon_cons_3_node_3_1 ^2 - 2 demcon_cons_2_node_2_1 ^2
+   - demcon_cons_1_node_1_1 ^2 - 1.5 demcon_cons_3_node_3_2 ^2
+   - 2 demcon_cons_2_node_2_2 ^2 - demcon_cons_1_node_1_2 ^2
+   - 1.5 demcon_cons_3_node_3_3 ^2 - 2 demcon_cons_2_node_2_3 ^2
+   - demcon_cons_1_node_1_3 ^2 - 1.5 demcon_cons_3_node_3_4 ^2
+   - 2 demcon_cons_2_node_2_4 ^2 - demcon_cons_1_node_1_4 ^2 ] / 2 
 Subject To
  prod_ub_gen_3_1: - invest_gen_3 + prodgen_gen_3_1 <= 0
  prod_ub_gen_3_2: - invest_gen_3 + prodgen_gen_3_2 <= 0
@@ -106,6 +133,90 @@ Subject To
    + phase_angle_node_1_4 = 0
  DC_flow_constrs_line_1_4: flow_line_1_4 - phase_angle_node_2_4
    + phase_angle_node_1_4 = 0
+ uncertain_intercept_constr_3_node_3_cons_3: - 6 demcon_cons_3_node_3_3
+   + uncertain_intercept_node_time_3_consumer_node_3_cons_3
+   + consumer_intercept_cons_3_node_3 >= 0
+ uncertain_intercept_constr_2_node_2_cons_2: - 2.5 demcon_cons_2_node_2_2
+   + uncertain_intercept_node_time_2_consumer_node_2_cons_2
+   + consumer_intercept_cons_2_node_2 >= 0
+ uncertain_intercept_constr_4_node_3_cons_3: - 12 demcon_cons_3_node_3_4
+   + uncertain_intercept_node_time_4_consumer_node_3_cons_3
+   + consumer_intercept_cons_3_node_3 >= 0
+ uncertain_intercept_constr_2_node_1_cons_1: - 2 demcon_cons_1_node_1_2
+   + uncertain_intercept_node_time_2_consumer_node_1_cons_1
+   + consumer_intercept_cons_1_node_1 >= 0
+ uncertain_intercept_constr_3_node_1_cons_1: - 4 demcon_cons_1_node_1_3
+   + uncertain_intercept_node_time_3_consumer_node_1_cons_1
+   + consumer_intercept_cons_1_node_1 >= 0
+ uncertain_intercept_constr_1_node_3_cons_3: - 6 demcon_cons_3_node_3_1
+   + uncertain_intercept_node_time_1_consumer_node_3_cons_3
+   + consumer_intercept_cons_3_node_3 >= 0
+ uncertain_intercept_constr_3_node_2_cons_2: - 5 demcon_cons_2_node_2_3
+   + uncertain_intercept_node_time_3_consumer_node_2_cons_2
+   + consumer_intercept_cons_2_node_2 >= 0
+ uncertain_intercept_constr_2_node_3_cons_3: - 3 demcon_cons_3_node_3_2
+   + uncertain_intercept_node_time_2_consumer_node_3_cons_3
+   + consumer_intercept_cons_3_node_3 >= 0
+ uncertain_intercept_constr_4_node_1_cons_1: - 8 demcon_cons_1_node_1_4
+   + uncertain_intercept_node_time_4_consumer_node_1_cons_1
+   + consumer_intercept_cons_1_node_1 >= 0
+ uncertain_intercept_constr_1_node_2_cons_2: - 5 demcon_cons_2_node_2_1
+   + uncertain_intercept_node_time_1_consumer_node_2_cons_2
+   + consumer_intercept_cons_2_node_2 >= 0
+ uncertain_intercept_constr_4_node_2_cons_2: - 10 demcon_cons_2_node_2_4
+   + uncertain_intercept_node_time_4_consumer_node_2_cons_2
+   + consumer_intercept_cons_2_node_2 >= 0
+ uncertain_intercept_constr_1_node_1_cons_1: - 4 demcon_cons_1_node_1_1
+   + uncertain_intercept_node_time_1_consumer_node_1_cons_1
+   + consumer_intercept_cons_1_node_1 >= 0
+ uncertain_slope_constr_3_node_3_cons_3:
+   uncertain_slope_node_time_3_consumer_node_3_cons_3
+   + consumer_slope_cons_3_node_3 + [ - 0.075 demcon_cons_3_node_3_3 ^2 ]
+   >= 0
+ uncertain_slope_constr_2_node_2_cons_2:
+   uncertain_slope_node_time_2_consumer_node_2_cons_2
+   + consumer_slope_cons_2_node_2 + [ - 0.1 demcon_cons_2_node_2_2 ^2 ]
+   >= 0
+ uncertain_slope_constr_4_node_3_cons_3:
+   uncertain_slope_node_time_4_consumer_node_3_cons_3
+   + consumer_slope_cons_3_node_3 + [ - 0.075 demcon_cons_3_node_3_4 ^2 ]
+   >= 0
+ uncertain_slope_constr_2_node_1_cons_1:
+   uncertain_slope_node_time_2_consumer_node_1_cons_1
+   + consumer_slope_cons_1_node_1 + [ - 0.05 demcon_cons_1_node_1_2 ^2 ]
+   >= 0
+ uncertain_slope_constr_3_node_1_cons_1:
+   uncertain_slope_node_time_3_consumer_node_1_cons_1
+   + consumer_slope_cons_1_node_1 + [ - 0.05 demcon_cons_1_node_1_3 ^2 ]
+   >= 0
+ uncertain_slope_constr_1_node_3_cons_3:
+   uncertain_slope_node_time_1_consumer_node_3_cons_3
+   + consumer_slope_cons_3_node_3 + [ - 0.075 demcon_cons_3_node_3_1 ^2 ]
+   >= 0
+ uncertain_slope_constr_3_node_2_cons_2:
+   uncertain_slope_node_time_3_consumer_node_2_cons_2
+   + consumer_slope_cons_2_node_2 + [ - 0.1 demcon_cons_2_node_2_3 ^2 ]
+   >= 0
+ uncertain_slope_constr_2_node_3_cons_3:
+   uncertain_slope_node_time_2_consumer_node_3_cons_3
+   + consumer_slope_cons_3_node_3 + [ - 0.075 demcon_cons_3_node_3_2 ^2 ]
+   >= 0
+ uncertain_slope_constr_4_node_1_cons_1:
+   uncertain_slope_node_time_4_consumer_node_1_cons_1
+   + consumer_slope_cons_1_node_1 + [ - 0.05 demcon_cons_1_node_1_4 ^2 ]
+   >= 0
+ uncertain_slope_constr_1_node_2_cons_2:
+   uncertain_slope_node_time_1_consumer_node_2_cons_2
+   + consumer_slope_cons_2_node_2 + [ - 0.1 demcon_cons_2_node_2_1 ^2 ]
+   >= 0
+ uncertain_slope_constr_4_node_2_cons_2:
+   uncertain_slope_node_time_4_consumer_node_2_cons_2
+   + consumer_slope_cons_2_node_2 + [ - 0.1 demcon_cons_2_node_2_4 ^2 ]
+   >= 0
+ uncertain_slope_constr_1_node_1_cons_1:
+   uncertain_slope_node_time_1_consumer_node_1_cons_1
+   + consumer_slope_cons_1_node_1 + [ - 0.05 demcon_cons_1_node_1_1 ^2 ]
+   >= 0
 Bounds
  -5 <= flow_line_3_1 <= 5
  -5 <= flow_line_3_2 <= 5

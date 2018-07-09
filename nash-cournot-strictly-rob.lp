@@ -4,19 +4,25 @@ Maximize
    - 22 prodgen_gen_2_1 - 15 prodgen_gen_3_1 - 20 prodgen_gen_1_2
    - 22 prodgen_gen_2_2 - 15 prodgen_gen_3_2 - 20 prodgen_gen_1_3
    - 22 prodgen_gen_2_3 - 15 prodgen_gen_3_3 - 20 prodgen_gen_1_4
-   - 22 prodgen_gen_2_4 - 15 prodgen_gen_3_4 + 60 demcon_cons_3_node_3_1
-   + 50 demcon_cons_2_node_2_1 + 40 demcon_cons_1_node_1_1
-   + 30 demcon_cons_3_node_3_2 + 25 demcon_cons_2_node_2_2
-   + 20 demcon_cons_1_node_1_2 + 60 demcon_cons_3_node_3_3
-   + 50 demcon_cons_2_node_2_3 + 40 demcon_cons_1_node_1_3
-   + 120 demcon_cons_3_node_3_4 + 100 demcon_cons_2_node_2_4
-   + 80 demcon_cons_1_node_1_4 + [ - 1.5 demcon_cons_3_node_3_1 ^2
-   - 2 demcon_cons_2_node_2_1 ^2 - demcon_cons_1_node_1_1 ^2
-   - 1.5 demcon_cons_3_node_3_2 ^2 - 2 demcon_cons_2_node_2_2 ^2
-   - demcon_cons_1_node_1_2 ^2 - 1.5 demcon_cons_3_node_3_3 ^2
-   - 2 demcon_cons_2_node_2_3 ^2 - demcon_cons_1_node_1_3 ^2
-   - 1.5 demcon_cons_3_node_3_4 ^2 - 2 demcon_cons_2_node_2_4 ^2
-   - demcon_cons_1_node_1_4 ^2 ] / 2 
+   - 22 prodgen_gen_2_4 - 15 prodgen_gen_3_4 + 54 demcon_cons_3_node_3_1
+   + 45 demcon_cons_2_node_2_1 + 36 demcon_cons_1_node_1_1
+   + 27 demcon_cons_3_node_3_2 + 22.5 demcon_cons_2_node_2_2
+   + 18 demcon_cons_1_node_1_2 + 54 demcon_cons_3_node_3_3
+   + 45 demcon_cons_2_node_2_3 + 36 demcon_cons_1_node_1_3
+   + 108 demcon_cons_3_node_3_4 + 90 demcon_cons_2_node_2_4
+   + 72 demcon_cons_1_node_1_4 + [ - 1.1 prodgen_gen_1_1 ^2
+   - 2.2 prodgen_gen_2_1 ^2 - 1.65 prodgen_gen_3_1 ^2
+   - 1.1 prodgen_gen_1_2 ^2 - 2.2 prodgen_gen_2_2 ^2
+   - 1.65 prodgen_gen_3_2 ^2 - 1.1 prodgen_gen_1_3 ^2
+   - 2.2 prodgen_gen_2_3 ^2 - 1.65 prodgen_gen_3_3 ^2
+   - 1.1 prodgen_gen_1_4 ^2 - 2.2 prodgen_gen_2_4 ^2
+   - 1.65 prodgen_gen_3_4 ^2 - 1.65 demcon_cons_3_node_3_1 ^2
+   - 2.2 demcon_cons_2_node_2_1 ^2 - 1.1 demcon_cons_1_node_1_1 ^2
+   - 1.65 demcon_cons_3_node_3_2 ^2 - 2.2 demcon_cons_2_node_2_2 ^2
+   - 1.1 demcon_cons_1_node_1_2 ^2 - 1.65 demcon_cons_3_node_3_3 ^2
+   - 2.2 demcon_cons_2_node_2_3 ^2 - 1.1 demcon_cons_1_node_1_3 ^2
+   - 1.65 demcon_cons_3_node_3_4 ^2 - 2.2 demcon_cons_2_node_2_4 ^2
+   - 1.1 demcon_cons_1_node_1_4 ^2 ] / 2 
 Subject To
  prod_ub_gen_3_1: - invest_gen_3 + prodgen_gen_3_1 <= 0
  prod_ub_gen_3_2: - invest_gen_3 + prodgen_gen_3_2 <= 0
